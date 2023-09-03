@@ -4,10 +4,10 @@ import { useState } from "react";
 export default function Home() {
   useEffect(() => {
 
-                                 //Read
+    //                              //Read
     // async function getApi()
     // {
-    //   const api = await fetch(`https://jsonplaceholder.typicode.com/todos/2`);
+    //   const api = await fetch(`https://jsonplaceholder.typicode.com/todos`);
     //   const json = await api.json();
     //   console.log(json);
     // }
@@ -15,26 +15,26 @@ export default function Home() {
 
 
                              //Create
-    // async function postApi()
-    // {
-    //   const api = await fetch(`https://jsonplaceholder.typicode.com/todos`, {
-    //     method: 'POST',
-    //     body: JSON.stringify({
-    //       userId: 5,
-    //       title: 'Rich Dad and Poor Dad',
-    //       completed: true
-    //     }),
-    //     headers: {
-    //       'Content-type': 'application/json; charset=UTF-8',
-    //     },
-    //   });
-    //   const json = await api.json();
-    //   console.log(json);
-    // }
-    // postApi();
+    async function postApi()
+    {
+      const api = await fetch(`https://jsonplaceholder.typicode.com/todos`, {
+        method: 'POST',
+        body: JSON.stringify({
+          userId: 5,
+          title: 'Rich Dad and Poor Dad',
+          completed: true
+        }),
+        headers: {
+          'Content-type': 'application/json; charset=UTF-8',
+        },
+      });
+      const json = await api.json();
+      console.log(json);
+    }
+    postApi();
 
 
-                                 //Update Object
+    //                              //Update Object
     // async function putApi()
     // {
     //   const api = await fetch(`https://jsonplaceholder.typicode.com/todos/2`, {
@@ -54,7 +54,7 @@ export default function Home() {
     // putApi();
 
 
-                                 //Update Specific Attribute    
+    //                              //Update Specific Attribute    
     // async function patchApi()
     // {
     //   const api = await fetch(`https://jsonplaceholder.typicode.com/todos/3`, {
@@ -72,19 +72,19 @@ export default function Home() {
     // patchApi();
 
 
-                                 //Delete
-    async function deleteApi()
-    {
-      const api = await fetch(`https://jsonplaceholder.typicode.com/todos/3`, {
-        method: 'DELETE',
-        headers: {
-          'Content-type': 'application/json; charset=UTF-8',
-        },
-      });
-      const json = await api.json();
-      console.log(json);
-    }
-    deleteApi();
+    //                              //Delete
+    // async function deleteApi()
+    // {
+    //   const api = await fetch(`https://jsonplaceholder.typicode.com/todos/3`, {
+    //     method: 'DELETE',
+    //     headers: {
+    //       'Content-type': 'application/json; charset=UTF-8',
+    //     },
+    //   });
+    //   const json = await api.json();
+    //   console.log(json);
+    // }
+    // deleteApi();
     
   }, [])
   
